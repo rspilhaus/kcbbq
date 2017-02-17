@@ -3,7 +3,7 @@
   <head>
 	  
 		<!-- Fonts -->
-		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:400,700' rel='stylesheet' type='text/css'>	
+		<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700|Merriweather:700' rel='stylesheet' type='text/css'>	
 		
 		<!-- Meta Stuff -->
 	    <meta charset="<?php bloginfo( 'charset' ); ?>">
