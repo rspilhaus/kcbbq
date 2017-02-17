@@ -15,7 +15,6 @@
 
 <section class="page-intro">
 	<div class="container">
-<!-- 		<h2 class="page-intro__title">Kansas City BBQ Restaurants</h2> -->
 		<p class="page-intro__subtitle">Presented alphabetically without ranking or judgement. Think we&rsquo;re missing one? Submit it to us!</p>
 		<p><a href="#submit" class="btn btn-red smooth-scroll">Submit a Listing</a></p>
 	</div><!--end .container-->
