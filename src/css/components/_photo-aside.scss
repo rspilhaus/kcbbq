@@ -4,7 +4,7 @@
 
 .photo-aside {
 	width:100%;
-	min-height:320px;
+	min-height:352px;
 	background-color: $color-red;
 	background-size: cover;
 	background-position: center center;
@@ -13,10 +13,36 @@
 	text-align: center;
 	display: flex;
 	align-items: center;
+	position: relative;
+ 	overflow: hidden;
 	@include respond($breakpoint-padding) {
-		min-height: 400px;
+		min-height: 432px;
 	}
 }
+
+
+.photo-aside:after {
+	content:"";
+	position: absolute;
+	top:100%;
+	left:0;
+	width:200%;
+	height:112px;
+	background:#fff;
+	transform:translateY(-50%) rotate(-2deg);
+}
+/*
+.photo-aside:before {
+	content:"";
+	position: absolute;
+	bottom:100%;
+	right:0;
+	width:200%;
+	height:112px;
+	background:#fff;
+	transform:translateY(50%) rotate(-2deg);
+}
+*/
 
 .photo-aside .container {
 	max-width: 816px;
