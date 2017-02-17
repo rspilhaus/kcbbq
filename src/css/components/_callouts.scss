@@ -1,0 +1,96 @@
+// -----------------------------------------------------------------
+//! Homepage Triple Callout Styles
+// -----------------------------------------------------------------
+
+.callouts {
+	margin:0;
+	@include respond($breakpoint-callouts-sm) {	
+	//	margin:-48px 0 0 0;
+	}
+	@include respond($breakpoint-callouts-md) {	
+	//	margin:-54px 0 0 0;
+	}
+	@include respond($breakpoint-callouts-lg) {	
+	//	margin:-64px 0 0 0;
+	}
+
+}
+.callouts .container {
+	display: flex;	
+	flex-direction: column;
+	padding:0 8px;
+	@include respond($breakpoint-callouts-sm) {	
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	@include respond($breakpoint-callouts-md) {
+		flex-direction: row;	
+		flex-wrap: nowrap;
+		padding:0 16px;
+	}
+	@include respond($breakpoint-callouts-lg) {
+		padding:0 0;
+	}
+}
+
+.callouts__item {
+	width:100%;
+	padding: 0;
+
+	@include respond($breakpoint-callouts-sm) {
+		width:50%;
+		//padding: 8px;
+		&:first-of-type {
+			padding:0;
+		}
+		&:last-of-type {
+			width:100%;
+			padding:0;
+		}
+	}
+	@include respond($breakpoint-callouts-md) {
+		width:33.33333333%;	
+		//padding:0 16px;
+		&:last-of-type {
+			width:33.33333333%;
+		}
+	}
+	@include respond($breakpoint-callouts-lg) {
+		//padding:0 24px;
+	}
+}
+
+.callouts__inner {
+	padding:22px 24px 24px 24px;
+	color:#fff;
+	width:100%;
+	height:100%;
+	background:$color-red;
+/*
+	background: $color-orange;
+	background: linear-gradient(125deg,  #439be5 0%,#29c9d1 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#439be5', endColorstr='#29c9d1',GradientType=1 );
+*/
+	text-align: center;
+	@include respond($breakpoint-callouts-lg) {
+		padding:29px 32px 32px 32px;	
+	}
+}
+
+
+.callouts__title {
+	margin:0 0 18px 0;
+	font-size:1.5em;
+	line-height: 1;
+	@include respond($breakpoint-callouts-lg) {
+		font-size:2em;
+	}	
+}
+
+.callouts__subtitle {
+	margin:0 0 18px 0;
+	font-size:1em;
+	@include respond($breakpoint-callouts-lg) {
+		font-size:1.125em;
+	}
+}

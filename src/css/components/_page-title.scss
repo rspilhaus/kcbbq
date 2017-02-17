@@ -1,0 +1,44 @@
+// -----------------------------------------------------------------
+//! Interior Page Title Styles
+// -----------------------------------------------------------------
+
+.page-title {
+	background: $color-red;
+	background: linear-gradient(125deg,  $color-orange 0%,$color-red 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e58c43', endColorstr='#ebbc0b',GradientType=1 );
+	color:#fff;
+	height:296px;
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: flex-start;
+	@include respond($breakpoint-typography-sm) {
+		height:360px;	
+	}
+	position:relative;
+	overflow: hidden;
+}
+
+.page-title:before {
+	content:"";
+	position: absolute;
+	top:100%;
+	left:0;
+	width:200%;
+	height:112px;
+	background:#fff;
+	transform:translateY(-50%) rotate(-2deg);
+}
+
+
+.page-title__header {
+	font-size:2em;
+	margin: 0;
+	@include respond($breakpoint-typography-sm) {
+		font-size:2.5em;
+	}
+	@include respond($breakpoint-typography-md) {
+		font-size:3em;
+	}
+}

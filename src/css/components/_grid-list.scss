@@ -1,0 +1,73 @@
+// -----------------------------------------------------------------
+//! Restaurant Grid Style
+// -----------------------------------------------------------------
+.grid-container {
+	background:#fff;
+}
+.grid-list {
+	padding:0 14px 14px 14px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	max-width:1800px;
+	margin:0 auto;
+	@include respond($breakpoint-padding) {
+		padding:0 22px 22px 22px;
+	}
+
+}
+
+.grid-item {
+	width:100%;
+	padding:4px;
+	@include respond($breakpoint-grid-2) {
+		width:50%;
+	}
+	@include respond($breakpoint-grid-3) {
+		width:33.333333%;
+	}
+	@include respond($breakpoint-grid-4) {
+		width:25%;
+	}	
+	@include respond($breakpoint-grid-5) {
+		width:20%;
+	}		
+}
+
+.grid-item__inner {
+	width:100%;
+	height:100%;
+	background: $color-offwhite;
+	padding:16px 16px 50px 16px;
+	position: relative;
+}
+
+.grid-item__title {
+	margin:0 0 8px 0;
+	font-size:1em;
+	font-family: $font-body;
+	@include respond($breakpoint-typography-md) {
+		font-size:1.125em;
+	}
+}
+
+.grid-item__address {
+	margin:0;
+	font-size:0.875em;	
+	line-height: 1.428;
+}
+
+.grid-item__url {
+	margin:0;
+	font-size:0.875em;	
+	display: block;
+	width:100%;
+	position: absolute;
+	bottom:16px;
+	left:16px;
+}
+
+.grid-item__url:hover {
+	color: $color-orange;
+	text-decoration: none;
+}

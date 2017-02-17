@@ -1,0 +1,15 @@
+// -----------------------------------------------------------------
+//! Interior Page Content
+// -----------------------------------------------------------------
+
+.page-content {
+	background:#fff;
+}
+
+.page-content .container {
+	max-width: 592px;
+	padding:25px 24px;
+	@include respond($breakpoint-padding) {
+		padding:57px 24px;	
+	}
+}

@@ -1,0 +1,144 @@
+// -----------------------------------------------------------------
+//! Submission form
+// -----------------------------------------------------------------
+
+.submit {
+	background:#fff;
+	text-align: center;
+}
+
+.submit .container {
+	max-width: 544px;
+	padding:25px 16px;
+	@include respond($breakpoint-padding) {
+		padding:57px 24px;	
+	}
+}
+
+.submit__title {
+	margin:0;
+	font-size:1.25em;
+	margin: 0;
+	@include respond($breakpoint-typography-sm) {
+		font-size:1.75em;
+	}
+	@include respond($breakpoint-typography-md) {
+		font-size:2em;
+	}
+
+}
+
+.submit__subtitle {
+	margin:18px 0 29px 0;
+}
+
+form {
+	position: relative;
+	text-align: left;
+	width:100%;
+	background: $color-offwhite;
+	padding:16px;
+	@include respond($breakpoint-grid-2) {
+		padding:24px;
+	}
+	@include respond($breakpoint-grid-3) {
+		padding:32px;
+	}
+}
+
+form ul {
+	margin:0;
+	padding:0;
+	list-style: none;
+}
+
+form ul li {
+	margin:0;
+	padding:0 0 16px 0;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="email"],
+form textarea {
+	width:100%;
+	display: block;
+	font-size:1em;
+	font-family: $font-body;
+	color: $color-body;
+	padding:8px;
+	border-radius: 0;
+	-webkit-appearance: none;
+}
+
+form input[type="text"],
+form input[type="url"],
+form input[type="email"] {
+	height:48px;
+	line-height: 48px;
+}
+form textarea {
+	max-height: 96px;
+}
+
+form label {
+	margin:0 0 10px 0;
+	display: block;
+	font-size:0.875em;
+	font-weight: bold;
+}
+
+form input[type="submit"] {
+	@extend .btn;
+	@extend .btn-red;
+	-webkit-appearance: none;	
+}
+
+.validation_error {
+	text-align: center;
+	margin:0 0 16px 0;
+	font-size:0.875em;
+	padding:0 32px;
+}
+
+.validation_message {
+	font-style: italic;
+	color: $color-red;
+	font-size:0.75em;
+	margin:4px 0 0 0;
+}
+
+.gform_footer {
+	text-align: right;
+	padding-top:16px;
+	position: relative;
+}
+
+
+// -----------------------------------------------------------------
+//! Confirmation
+// -----------------------------------------------------------------
+
+body img.gform_ajax_spinner {
+    //display: none !important;
+    position: absolute !important;
+    left:0;
+    bottom:14px;
+}
+
+.gforms_confirmation_message {
+	text-align: center;
+	width:100%;
+	background: $color-offwhite;
+	padding:16px;
+	font-size:1em;
+	@include respond($breakpoint-grid-2) {
+		padding:24px;
+	}
+	@include respond($breakpoint-grid-3) {
+		padding:32px;
+	}
+	@include respond($breakpoint-typography-sm) {
+		font-size:1.125em;
+	}
+}

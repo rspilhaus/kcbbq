@@ -1,0 +1,61 @@
+// -----------------------------------------------------------------------------
+//! Fonts
+// -----------------------------------------------------------------------------
+
+$font-headings: 'Vollkorn', Georgia, Times, serif;
+$font-body: 'Open Sans', Helvetica, Arial, Sans-serif;
+$font-quote: 'Vollkorn', Georgia, Times, serif;
+
+
+// -----------------------------------------------------------------------------
+//! Colors
+// -----------------------------------------------------------------------------
+
+
+$color-body: 		#666666;
+$color-offwhite:	#f0f0f0;
+
+$color-red:			#fc575d;
+$color-orange:		#ebbc0c;
+
+
+// -----------------------------------------------------------------------------
+//! Z-indexes
+// -----------------------------------------------------------------------------
+
+$z_index-level6: 120;
+$z_index-level5: 100;
+$z_index-level4: 75;
+$z_index-level3: 50;
+$z_index-level2: 25;
+$z_index-level1: 1;
+$z_index-level0: -1;
+
+// -----------------------------------------------------------------------------
+//! Breakpoints 
+// -----------------------------------------------------------------------------
+
+$breakpoint-padding:		767px;
+$breakpoint-hamburger:		767px;
+
+$breakpoint-logo-lg:		480px;
+$breakpoint-logo-sm:		380px;
+
+$breakpoint-hero-lg:		1400px;
+$breakpoint-hero-md:		1000px;
+$breakpoint-hero-sm:		768px;
+
+$breakpoint-typography-lg:	1060px;
+$breakpoint-typography-md:	700px;
+$breakpoint-typography-sm:	480px;
+
+$breakpoint-callouts-lg:	1060px;
+$breakpoint-callouts-md:	820px;
+$breakpoint-callouts-sm:	530px;
+
+$breakpoint-grid-5: 		1600px;
+$breakpoint-grid-4: 		1200px;
+$breakpoint-grid-3: 		660px;
+$breakpoint-grid-2:			480px;
+
+

@@ -1,0 +1,34 @@
+// -----------------------------------------------------------------
+//! Photo Block Styles
+// -----------------------------------------------------------------
+
+.photo-aside {
+	width:100%;
+	min-height:320px;
+	background-color: $color-red;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding:64px 0;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	@include respond($breakpoint-padding) {
+		min-height: 400px;
+	}
+}
+
+.photo-aside .container {
+	max-width: 816px;
+}
+
+.photo-aside__quote {
+	color:#fff;
+	font-family: $font-quote;
+	font-weight: 400;
+	font-size:2em;
+	margin:0;
+	@include respond($breakpoint-typography-sm) {
+		font-size:2.5em;
+	}
+}
