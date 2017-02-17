@@ -36,7 +36,7 @@
 					<h4 class="grid-item__title"><?php the_title(); ?></h4>
 					<p class="grid-item__address"><?php the_field('address'); ?></p>
 					<?php if(get_field('url')) : ?>
-						<a href="<?php the_field('url'); ?>" class="grid-item__url" target="_blank">Visit Website &rsaquo;</a>
+						<a href="<?php the_field('url'); ?>" rel="nofollow" class="grid-item__url" target="_blank">Visit Website &rsaquo;</a>
 					<?php endif; ?>
 				</div><!--end .grid-item__inner-->
 			</div><!--end .grid-item-->
