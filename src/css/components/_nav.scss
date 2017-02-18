@@ -81,7 +81,7 @@
 //! Scrolled
 // -----------------------------------------------------------------
 .has-sticky .page-title,
-.has-nav .page-title {
+.has-nav {
 	header {
 		position: fixed;
 		background:#fff;
@@ -133,6 +133,7 @@
 .has-nav header {
 	transform: none;
 }
+
 
 .has-sticky .page-title header{
 	top:0;
