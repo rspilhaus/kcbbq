@@ -6,6 +6,7 @@
 	width:100%;
 	padding:8px 0;
 	color:#fff;
+	transform: translate3d(0px,0px,0px);
 }
 
 .header .container {
@@ -21,15 +22,6 @@
 	width: 100px;
 	position: relative;
 	z-index: $z_index-level6;
-/*
-	//transition:all 0.2s ease;
-	@include respond($breakpoint-logo-sm) {
-		width: 150px;	
-	}
-	@include respond($breakpoint-logo-lg) {
-		width: 192px;
-	}
-*/
 	@include respond($breakpoint-hamburger) {
 		width:192px;
 	}
@@ -136,6 +128,12 @@
 		
 	}
 	
+}
+
+.has-nav {
+	header {
+		transform: none;
+	}
 }
 
 .has-sticky {
