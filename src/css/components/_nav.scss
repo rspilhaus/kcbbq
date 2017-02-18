@@ -80,8 +80,8 @@
 // -----------------------------------------------------------------
 //! Scrolled
 // -----------------------------------------------------------------
-.has-sticky,
-.has-nav {
+.has-sticky .page-title,
+.has-nav .page-title {
 	header {
 		position: fixed;
 		background:#fff;
@@ -130,16 +130,12 @@
 	
 }
 
-.has-nav {
-	header {
-		transform: none;
-	}
+.has-nav .page-title header {
+	transform: none;
 }
 
-.has-sticky {
-	header {
-		top:0;
-	}
+.has-sticky .page-title header{
+	top:0;
 }
 
 // -----------------------------------------------------------------
