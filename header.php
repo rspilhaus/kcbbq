@@ -21,6 +21,10 @@
 		<meta name="msapplication-config" content="<?php bloginfo('template_url'); ?>/build/favicons/browserconfig.xml">
 		<meta name="theme-color" content="#ffffff">
 		
+		<meta name="og:image" content="<?php bloginfo('template_url'); ?>/build/images/facebook-image.jpg">
+
+		
+		
 		
 		<!-- CSS -->
 	    <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/build/css/style.css">
