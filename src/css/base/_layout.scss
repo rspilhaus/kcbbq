@@ -12,17 +12,13 @@ body {
 	min-height: 100%;
 	overflow-x:hidden;
 	border: 16px solid $color-offwhite;
-	transition: padding 0.4s ease;
 	@include respond($breakpoint-padding) {
 		border: 24px solid $color-offwhite;	
 	}
 }
 
 body.has-nav {
-	padding-top:122px;
-	@include respond($breakpoint-hamburger) {
-		padding-top:0;
-	}
+	overflow: hidden;
 }
 
 .page-wrap {

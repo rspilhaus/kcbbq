@@ -9,12 +9,14 @@
 		display: none;
 	}
 	@include clearfix;
+	position: relative;
+	z-index: $z_index-level6;
 }
 
 .hamburger__label {
 	float:right;
-	line-height: 25px;
-	padding:6px 0 10px 0;
+	line-height: 29px;
+	padding:0;
 	display: inline-block;
 	font-weight: 700;
 	cursor: pointer;

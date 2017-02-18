@@ -9,15 +9,21 @@
 	color:#fff;
 	height:296px;
 	text-align: center;
+/*
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	align-items: flex-start;
+*/
+	padding-top:8px;
 	@include respond($breakpoint-typography-sm) {
 		height:360px;	
 	}
 	position:relative;
 	overflow: hidden;
+	@include respond($breakpoint-padding) {
+		padding-top:24px;
+	}
 }
 
 .page-title:after {
@@ -31,7 +37,13 @@
 	transform:translateY(-50%) rotate(-2deg);
 }
 
-
+.page-title .page-title__title-container {
+	position: absolute;
+	top:50%;
+	left:0;
+	width:100%;
+	transform: translateY(-50%);
+}
 .page-title__header {
 	font-size:2em;
 	margin: 0;

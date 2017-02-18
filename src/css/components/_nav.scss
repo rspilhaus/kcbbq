@@ -4,11 +4,8 @@
 
 .header {
 	width:100%;
-	padding:16px 0 0 0;
+	padding:8px 0;
 	color:#fff;
-	@include respond($breakpoint-padding) {
-		padding:32px 0 0 0;
-	}
 }
 
 .header .container {
@@ -20,17 +17,25 @@
 	}
 }
 
-.header .logo {
+.header #logo-svg {
 	width: 100px;
+	position: relative;
+	z-index: $z_index-level6;
+/*
+	//transition:all 0.2s ease;
 	@include respond($breakpoint-logo-sm) {
 		width: 150px;	
 	}
 	@include respond($breakpoint-logo-lg) {
 		width: 192px;
 	}
+*/
+	@include respond($breakpoint-hamburger) {
+		width:192px;
+	}
 }
 
-.header .logo path {
+.header #logo-svg path {
 	fill: #fff;
 }
 
@@ -43,6 +48,7 @@
 	margin:0 0 0 32px;
 	font-size:1.125em;
 	position: relative;
+	line-height: 32px;
 	&:first-of-type {
 		margin-left:0;
 	}
@@ -80,24 +86,90 @@
 }
 
 // -----------------------------------------------------------------
+//! Scrolled
+// -----------------------------------------------------------------
+.has-sticky,
+.has-nav {
+	header {
+		position: fixed;
+		background:#fff;
+
+		left:16px;
+		right:16px;
+		width:auto;
+		z-index: $z_index-level6;
+		@include respond($breakpoint-padding) {
+			left:24px;
+			right:24px;	
+		}
+		border-bottom:1px solid rgba(0,0,0,0.05);
+	}
+	
+	header #logo-svg {
+		width: 100px;
+	}
+	
+	header #logo-svg #logo-svg-text {
+		display: none;
+	}
+	
+	header #logo-svg #logo-svg-flame-icon path {
+		fill: $color-red;
+	}
+	
+	header {
+		//Nav colors
+		.hamburger__inner, 
+		.hamburger__inner::before, 
+		.hamburger__inner::after {
+			background-color: $color-red;
+		}
+		.hamburger__label {
+			color: $color-red;
+		}
+		.header__nav a {
+			color: $color-red;
+			&:before {
+				background: $color-red;
+			}	
+		}
+		
+	}
+	
+}
+
+.has-sticky {
+	header {
+		top:0;
+	}
+}
+
+// -----------------------------------------------------------------
 //! Mobile Nav
 // -----------------------------------------------------------------
 
 @include respond($breakpoint-hamburger, "down") {
 	.header__nav {
-		position: absolute;
-		top:-138px;
+		position: fixed;
+		top:0;
+		bottom:0;
 		left:0;
-		width:100%;
+		right:0;
+		padding:54px 0 0 0;
 		//background: $color-red;
-		background:#fff;
-		display: flex;
+		background:$color-offwhite;
+		display: none;
 		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 		transition: all 0.4s ease;
+		z-index: $z_index-level5;
+		
 	}
 	
+
 	.has-nav .header__nav {
-		top:-16px;
+		display: flex;
 	}
 	
 	.header__nav a {
@@ -107,6 +179,9 @@
 		display: block;
 		width:100%;
 		color:$color-red;
+		padding:16px;
+		font-size: 2em;
+		font-family: $font-headings;
 		&:first-of-type {
 			border-top:none;
 		}

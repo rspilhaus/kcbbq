@@ -18,8 +18,10 @@
 	flex-wrap: wrap;
 	align-items: flex-start;
 	padding-bottom:64px;
+	padding-top:8px;
 	@include respond($breakpoint-padding) {
 		min-height: 660px;
+		padding-top:24px;
 	}
 
 	@include respond($breakpoint-hero-md) {
@@ -33,6 +35,10 @@
 
 .hero__text {
 	max-width: 800px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%, -50%);
 }
 
 .hero__title {

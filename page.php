@@ -2,7 +2,7 @@
 
 <section class="page-title">
 	<?php get_template_part( 'partials/partial', 'nav' ); ?>
-	<div class="container">
+	<div class="container page-title__title-container">
 		<h1 class="page-title__header"><?php the_title(); ?></h1>
 	</div><!--end .container-->
 </section><!--end .page-title-->
