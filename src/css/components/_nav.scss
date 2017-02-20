@@ -81,8 +81,7 @@
 // -----------------------------------------------------------------
 //! Scrolled
 // -----------------------------------------------------------------
-.has-sticky .page-title,
-.has-nav {
+.has-sticky .page-title {
 	header {
 		position: fixed;
 		background:#fff;
@@ -128,8 +127,58 @@
 		}
 		
 	}
-	
 }
+
+.has-nav {
+	@include respond($breakpoint-hamburger, "down") {
+		header {
+			position: fixed;
+			background:#fff;
+	
+			left:16px;
+			right:16px;
+			width:auto;
+			z-index: $z_index-level6;
+			@include respond($breakpoint-padding) {
+				left:24px;
+				right:24px;	
+			}
+			border-bottom:1px solid rgba(0,0,0,0.05);
+		}
+		
+		header #logo-svg {
+			width: 100px;
+		}
+		
+		header #logo-svg #logo-svg-text {
+			display: none;
+		}
+		
+		header #logo-svg #logo-svg-flame-icon path {
+			fill: $color-red;
+		}
+		
+		header {
+			//Nav colors
+			.hamburger__inner, 
+			.hamburger__inner::before, 
+			.hamburger__inner::after {
+				background-color: $color-red;
+			}
+			.hamburger__label {
+				color: $color-red;
+			}
+			.header__nav a {
+				color: $color-red;
+				&:before {
+					background: $color-red;
+				}	
+			}
+			
+		}
+	}
+}
+
 
 .has-nav header {
 	transform: none;
@@ -151,7 +200,7 @@
 		bottom:0;
 		left:0;
 		right:0;
-		padding:54px 0 0 0;
+		padding:54px 16px 0 16px;
 		//background: $color-red;
 		background:$color-offwhite;
 		display: none;
