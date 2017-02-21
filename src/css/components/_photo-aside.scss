@@ -11,8 +11,7 @@
 	background-repeat: no-repeat;
 	padding:64px 0;
 	text-align: center;
-	display: flex;
-	align-items: center;
+	display: block;
 	position: relative;
  	overflow: hidden;
 	@include respond($breakpoint-padding) {
@@ -46,15 +45,22 @@
 
 .photo-aside .container {
 	max-width: 816px;
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
 }
 
 .photo-aside__quote {
 	color:#fff;
 	font-family: $font-quote;
 	font-weight: 700;
-	font-size:2em;
+	font-size:1.5em;
 	margin:0;
 	@include respond($breakpoint-typography-sm) {
+		font-size:2em;
+	}
+	@include respond($breakpoint-typography-md) {
 		font-size:2.5em;
 	}
 }
